@@ -42,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let instractions = 'instructions: you are an insurance agent selling car insurance try answering relevant questions only \nquery: ';
 
       const chatCompletion = await openai.chat.completions.create({
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-4',
         messages: [{ role: 'user', content: instractions + message }],
       });
 
