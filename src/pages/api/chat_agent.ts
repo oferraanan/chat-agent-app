@@ -89,7 +89,11 @@ const openai = new OpenAI({
 });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
+  if (!process.env.OPENAI_API_KEY) {
+    let msg = `Missing OPENAI_API_KEY not found in the environment file`
+    console.error(msg);
+    res.status(500).end(msg);
+  } else
   if (req.method === 'POST') {
     try {
       const session = await getIronSession<{history: ChatMessage[]}>(req, res, sessionOptions);
