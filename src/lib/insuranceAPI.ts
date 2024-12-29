@@ -15,7 +15,7 @@ export interface AccidentDetails {
 // Simulate fetching insurance quotes
 export const getInsuranceQuote = async (
   type: "car" | "house",
-  details?: any
+  details: any
 ): Promise<any> => {
   try {
     // Replace this with a real API endpoint if available

@@ -7,7 +7,7 @@ import { ChatMessageHistory } from "langchain/memory";
 
 export const runInsuranceAgent = async (input: string) => {
   const model = new ChatOpenAI({
-    modelName: "gpt-4o",
+    modelName: "gpt-4",
     temperature: 0.7,
   });
 
