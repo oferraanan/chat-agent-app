@@ -8,7 +8,7 @@ interface ChatMessage {
   }
 
 const sessionOptions: SessionOptions = {
-            password: process.env.OPENAI_API_KEY ? process.env.OPENAI_API_KEY :'' ,
+            password: process.env.SESSION_PASSWORD ? process.env.SESSION_PASSWORD :'' ,
             cookieName: 'my-chat-session',
             cookieOptions: {
               secure: process.env.NODE_ENV === 'production', // Use true in production for https
